@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Koza-Matbaa/static/css/main.999dedd8.css",
-    "main.js": "/Koza-Matbaa/static/js/main.46301197.js",
+    "main.js": "/Koza-Matbaa/static/js/main.0e2c49e4.js",
     "static/js/453.6b70415c.chunk.js": "/Koza-Matbaa/static/js/453.6b70415c.chunk.js",
     "static/media/kozaLogo.png": "/Koza-Matbaa/static/media/kozaLogo.095c987d7e9bab6d0113.png",
     "static/media/businessCard.png": "/Koza-Matbaa/static/media/businessCard.00a0ff7d1a1565453e13.png",
     "index.html": "/Koza-Matbaa/index.html",
     "main.999dedd8.css.map": "/Koza-Matbaa/static/css/main.999dedd8.css.map",
-    "main.46301197.js.map": "/Koza-Matbaa/static/js/main.46301197.js.map",
+    "main.0e2c49e4.js.map": "/Koza-Matbaa/static/js/main.0e2c49e4.js.map",
     "453.6b70415c.chunk.js.map": "/Koza-Matbaa/static/js/453.6b70415c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.999dedd8.css",
-    "static/js/main.46301197.js"
+    "static/js/main.0e2c49e4.js"
   ]
 }
