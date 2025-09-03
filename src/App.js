@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <HashRouter basename="/Koza-Matbaa">
+      <HashRouter>
         <NavComponent />
         <Routes>
           <Route path="/" element={ <MovingText/>} />
