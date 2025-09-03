@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavComponent from "./components/Nav.js";
+import Cont from "./components/cont.js";
+import MovingText from "./components/text.js"
+import Catalog from "./components/Catalog.js";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <NavComponent />
+        <Routes>
+          <Route path="/" element={ <MovingText/>} />
+          <Route path="/products" element={<Catalog onImageClick={openModal} />} />
+          {/* You can add other routes here */}
+        </Routes>
+      </BrowserRouter>
+      {isModalOpen && <Cont open={isModalOpen} onClose={closeModal} product={selectedProduct} />}
     </div>
   );
 }
