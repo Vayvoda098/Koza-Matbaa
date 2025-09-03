@@ -1,7 +1,7 @@
 import React from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import kozaLogo from "../img/kozaLogo.png"
 const navigation = [
   { name: 'Anasayfa', href: '/', current: false },
@@ -44,9 +44,9 @@ function NavComponent() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       location.pathname === item.href || (item.href === '/' && location.pathname === '/')
@@ -56,7 +56,7 @@ function NavComponent() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -71,8 +71,8 @@ function NavComponent() {
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as="a"
-              href={item.href}
+              as={Link}
+              to={item.href}
               aria-current={location.pathname === item.href ? 'page' : undefined}
               className={classNames(
                 location.pathname === item.href || (item.href === '/' && location.pathname === '/')
