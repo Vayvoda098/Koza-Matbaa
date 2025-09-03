@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import NavComponent from "./components/Nav.js";
 import Cont from "./components/cont.js";
 import MovingText from "./components/text.js"
@@ -20,14 +20,14 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <NavComponent />
         <Routes>
           <Route path="/" element={ <MovingText/>} />
           <Route path="/products" element={<Catalog onImageClick={openModal} />} />
           {/* You can add other routes here */}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       {isModalOpen && <Cont open={isModalOpen} onClose={closeModal} product={selectedProduct} />}
     </div>
   );

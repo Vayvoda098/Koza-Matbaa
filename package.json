@@ -2,6 +2,7 @@
   "name": "koza-matbaa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Vayvoda098.github.io/Koza-Matbaa",
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@headlessui/react": "^2.2.7",
@@ -23,6 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^3.4.17"
   }
 }
