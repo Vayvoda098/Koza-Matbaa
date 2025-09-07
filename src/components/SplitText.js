@@ -31,6 +31,7 @@ const SplitText = ({
         span.textContent += ' '; // Add space back for words
       }
       span.style.display = 'inline-block'; // Ensure each char/word is a block for animation
+      span.style.marginRight = splitType === 'words' ? '0.25em' : '0'; // Add margin for words
       return span;
     });
 
